@@ -34,15 +34,19 @@ body{
 }
 
 #date{
-    
+    position:absolute;
+    top:5vh;
+    left: 50px;
+    font-size: 20px;
+    border: 2px solid beige;
+    padding: 5px;
 }
 
 #clock{
-    display:inline-flex;
     position:absolute;
     top:5vh;
     right: 50px;
     font-size: 20px;
     border: 2px solid beige;
-    padding: 3px;
+    padding: 5px;
 }
