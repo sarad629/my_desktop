@@ -11,62 +11,18 @@
 <body onload="startTime()">
     <div class="container">
         <div class="top">
-            <div id="date">Hallo</div>
+            <div id="date">Date</div>
             <h1>My Personal Desktop</h1>
             <div id="clock"></div>
         </div>
         <div class="main">
-            <div class="widget">
-                <h3>Notepad</h3>
-                <div class="notepad">
-                    <textarea onload="loadNotes" id="note-area" name="message" rows="20" cols="40"></textarea>
-                </div>
-                <button id="saveNoteBtn">Save</button>
-            </div>
-            <div class="widget">
-                <h3>Widget 02</h3>
-            </div>
-            <div class="widget">
-                <h3>Widget 03</h3>
-            </div>
+           
         </div>
     </div>
 </body>
 
 <script>
 
-    /* --- FUNCTIONS --- */
-
-
-
-    /* --- MAIN CODE --- */
-
-    try {
-        var loadNotes = localStorage.getItem("notes");
-    }
-    catch(err) {
-            var loadNotes = "Enter your notes here and click 'Save'";
-    }
-
-    $("#note-area").val(loadNotes);
-
-    sp="/"
-    today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth()+1; //As January is 0.
-    var yyyy = today.getFullYear();
-
-    if(dd<10) dd='0'+dd;
-    if(mm<10) mm='0'+mm;
-
-    $("#date").html(mm+sp+dd+sp+yyyy);
-
-    $("#saveNoteBtn").click(function(){
-        var currentNotes = $("#note-area").val();
-        localStorage.setItem("notes", currentNotes);    
-    });
-
 </script>
 </html>
 
-<!--   console.log("notes: ", currentNotes);  -->
