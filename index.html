@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Online Desktop</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts.js"></script>
 </head>
 <body onload="startTime()">
@@ -16,7 +17,11 @@
         </div>
         <div class="main">
             <div class="widget">
-                <h3>Widget 01</h3>
+                <h3>Notepad</h3>
+                <div class="notepad">
+                    <textarea onload="loadNotes" id="note-area" name="message" rows="20" cols="40"></textarea>
+                </div>
+                <p><button id="saveNoteBtn">Save</button></p>
             </div>
             <div class="widget">
                 <h3>Widget 02</h3>
@@ -30,6 +35,20 @@
 
 <script>
 
+    /* --- FUNCTIONS --- */
+
+
+
+    /* --- MAIN CODE --- */
+
+    try {
+        var loadNotes = localStorage.getItem("notes");
+    }
+    catch(err) {
+            var loadNotes = "Enter your notes here and click 'Save'";
+    }
+
+    $("#note-area").val(loadNotes);
 
     sp="/"
     today = new Date();
@@ -40,7 +59,14 @@
     if(dd<10) dd='0'+dd;
     if(mm<10) mm='0'+mm;
 
-    document.getElementById('date').innerHTML = mm+sp+dd+sp+yyyy;
+    $("#date").html(mm+sp+dd+sp+yyyy);
+
+    $("#saveNoteBtn").click(function(){
+        var currentNotes = $("#note-area").val();
+        localStorage.setItem("notes", currentNotes);    
+    });
 
 </script>
 </html>
+
+<!--   console.log("notes: ", currentNotes);  -->

@@ -1,3 +1,5 @@
+/* --- FUNCTION FOR THE CLOCK --- */
+
 function startTime() {
     const today = new Date();
     let h = today.getHours();
@@ -13,13 +15,6 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 }
-
-if (document.readyState === 'complete') {
-
-    
-}
-
-
 
 
 

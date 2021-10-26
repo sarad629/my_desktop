@@ -3,6 +3,18 @@ body{
     color: beige;
 }
 
+button{
+    color: white;
+    background-color: #875c12;
+    font-size: 18px;
+    padding: 4px 10px 4px 10px;
+    border-radius: 10px;
+}
+
+button:hover{
+    border: 2px beige solid;
+}
+
 .top{
     background-color: rgba(70,61,56,0.8);
     height: 10vh;
@@ -26,11 +38,12 @@ body{
     padding-top: 0px;
     width: 32%;
     min-width: 300px;
-
+    text-align: center;
 }
 
-.widget>h3{
-    text-align: center;
+.notepad{
+    max-width: 30vw;
+    font-size: 20px;
 }
 
 #date{
@@ -49,4 +62,12 @@ body{
     font-size: 20px;
     border: 2px solid beige;
     padding: 5px;
+}
+
+#note-area{
+    font-size: 18px;
+    max-width: 28vw;
+    min-width: 15vw;
+    max-height: 58vh;
+    min-height: 25vh;
 }
