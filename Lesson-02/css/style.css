@@ -1,0 +1,61 @@
+body {
+    text-align:center;
+    background-image: url(../img/bg_mono.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+h1 {
+    color: #305370;
+    font-size:80px;
+    margin-top: 30px;
+}
+
+.content {
+    background-color:rgba(225, 255, 256, 0.6);
+    font-size:18px;
+    width:70%;
+    margin:auto;
+    padding:20px;
+}
+
+.back {
+    color:hsl(207, 49%, 59%);
+    background-color:white;
+    padding:15px;
+    border: 2px solid #305370;
+    font-size:20px;
+    color:black;
+    text-decoration:none;
+    display:block;
+    margin-top:20px;
+}
+
+.back:hover {
+    color:hsl(207, 49%, 59%);
+    background-color:rgb(77, 75, 88);
+    padding:15px;
+    border: 2px solid #305370;
+    font-size:20px;
+    color:white;
+    text-decoration:none;
+    display:block;
+    margin-top:20px;
+}
+
+.menu {
+    display:inline-block;
+    background-color:aliceblue;
+    margin:30px;
+
+}
+
+.container {
+    width:960px;
+    margin:auto;
+}
+
+
+#ruby {
+    height:130px;
+}
