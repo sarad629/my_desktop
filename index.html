@@ -12,7 +12,7 @@
     <div class="container">
         <div class="top">
             <div id="date">Date</div>
-            <h1>My Personal Desktop</h1>
+            <h1>Sara's Personal Desktop</h1>
             <div id="clock"></div>
         </div>
         <div class="main">
@@ -22,7 +22,22 @@
 </body>
 
 <script>
+    var sp = "/";
+    var today = new Date();
 
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+
+    if(dd<10) {
+        dd = '0' + dd;
+    }
+
+    if (mm<10) {
+        mm = '0' + mm;
+    }
+
+    $('#date').html(mm + sp + dd + sp +yyyy)
 </script>
 </html>
 
