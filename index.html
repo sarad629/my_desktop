@@ -18,6 +18,17 @@
         <div class="main">
            <div class="widget">
                 <h3>Widget 01</h3>
+
+                <div class="notepad">
+
+                    <textarea name="message" id="note-area" cols="40" rows="20"></textarea>
+
+                </div>
+
+                <p>
+                    <button id="saveNoteBtn">Save</button>
+                </p>
+
            </div>
 
             <div class="widget">
@@ -33,6 +44,16 @@
 </body>
 
 <script>
+
+    try {
+        var loadNotes = localStorage.getItem("notes");
+        console.log("loaded")
+    } catch (error) {
+        var noNotes = "Enter your notes here and click save";
+        console.log("not loaded")
+    }
+
+    $("#note-area").val(loadNotes);
     var sp = "/";
     var today = new Date();
 
@@ -48,7 +69,15 @@
         mm = '0' + mm;
     }
 
-    $('#date').html(mm + sp + dd + sp +yyyy)
+    $('#date').html(mm + sp + dd + sp +yyyy);
+
+    $("#saveNoteBtn").click(function() {
+        var currentNotes = $("#note-area").val();
+        localStorage.setItem("notes", currentNotes);
+        console.log("saved")
+    })  
+
+    
 </script>
 </html>
 
